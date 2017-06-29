@@ -8,7 +8,7 @@ extra-source-files:
   - LICENSE
 ghc-options:
   - -Wall
-  - -Wno-missing-signatures
+  - -fno-warn-missing-signatures
 dependencies:
   - base >=4.7 && <5
   - binary

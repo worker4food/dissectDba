@@ -1,0 +1,23 @@
+name: dissectDba
+version: '0.8.0.0'
+category: Console
+license: PublicDomain
+homepage: https://github.com/worker4food/dissectDba#readme
+extra-source-files:
+  - README.md
+  - LICENSE
+ghc-options:
+  - -Wall
+  - -Wno-missing-signatures
+dependencies:
+  - base >=4.7 && <5
+  - bytestring
+  - optparse-generic
+  - attoparsec
+  - attoparsec-binary
+  - system-filepath
+  - directory
+executables:
+  dissectDba:
+    main: Main.hs
+    source-dirs: src

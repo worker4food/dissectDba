@@ -11,10 +11,10 @@ ghc-options:
   - -Wno-missing-signatures
 dependencies:
   - base >=4.7 && <5
+  - binary
   - bytestring
   - optparse-generic
   - attoparsec
-  - attoparsec-binary
   - system-filepath
   - directory
 executables:

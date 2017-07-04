@@ -22,4 +22,6 @@ mkChecksum = extract . runGetOrFail (sumOf 0)
     sumOf acc = isEmpty >>= \eof ->
         if eof
             then pure acc
-            else getWord32le >>= sumOf . (acc +)
+            else do
+              x <- (acc + ) <$> getWord32le
+              x `seq` sumOf x
